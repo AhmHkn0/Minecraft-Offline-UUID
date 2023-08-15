@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="165.0" prefWidth="324.0" GridPane.rowIndex="1">
+         <children>
+            <Button accessibleText="getButton" layoutX="25.0" layoutY="38.0" mnemonicParsing="false" onMouseClicked="#getOfflineUUID" text="get" />
+            <TextField fx:id="playerNameFiled" layoutX="25.0" layoutY="1.0" onKeyTyped="#textChange" promptText="Player Name" />
+            <Button accessibleText="getButton" layoutX="63.0" layoutY="38.0" mnemonicParsing="false" onMouseClicked="#copy" text="copy" />
+            <TitledPane layoutX="25.0" layoutY="68.0" prefHeight="64.0" prefWidth="289.0">
+               <content>
+                  <Text fx:id="outputText" accessibleText="output" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;uuid&gt;" textAlignment="CENTER" />
+               </content>
+            </TitledPane>
+            <Text fx:id="copied" layoutX="117.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="43.0" />
+         </children>
+      </AnchorPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
